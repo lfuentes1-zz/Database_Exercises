@@ -1,5 +1,6 @@
-USE codeup_test_db; 
+USE codeup_test_db;
 
+-- clear the table if it already exists
 DROP TABLE IF EXISTS albums;
 
 CREATE TABLE albums (
