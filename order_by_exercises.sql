@@ -14,7 +14,8 @@ OR last_name LIKE '%E';
 SELECT *
 FROM employees
 WHERE last_name LIKE 'E%'
-AND last_name LIKE '%E';
+AND last_name LIKE '%E'
+ORDER BY emp_no ASC;
 
 SELECT *
 FROM employees
