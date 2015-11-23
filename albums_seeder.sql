@@ -1,6 +1,6 @@
 USE codeup_test_db;
 
--- to prevent duplicates
+-- to prevent duplicates, deletes
 TRUNCATE albums;
 
 INSERT INTO albums (artist_name, record_name, release_date, records_sold, record_genre)
