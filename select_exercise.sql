@@ -34,8 +34,6 @@ WHERE release_date BETWEEN '1990' AND '1999';
 -- Which albums had less than 20 million certified sales
 SELECT 'Less than 20 mil' AS 'Certified Sales:';
 SELECT record_name, records_sold FROM albums WHERE records_sold < 20.0;
-s
-
 
 -- All the albums in the rock genre. Is this all the rock albums in the table?
 SELECT 'Rock' AS 'Genre:';
