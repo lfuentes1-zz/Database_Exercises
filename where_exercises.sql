@@ -1,8 +1,9 @@
 SELECT * 
 FROM employees
-WHERE first_name = 'Irena' 
+WHERE gender = 'M'
+AND (first_name = 'Irena' 
 OR first_name = "Vidya"
-OR first_name = 'Maya';
+OR first_name = 'Maya');
 
 SELECT *
 FROM employees
