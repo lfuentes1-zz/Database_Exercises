@@ -15,12 +15,21 @@ SELECT record_name AS 'Album Name', release_date AS 'Year Released'
 FROM albums
 WHERE release_date > 1991;
 
+DELETE FROM albums
+WHERE release_date > 1991;
+
 -- Albums with the genre "disco"
 SELECT record_name AS 'Album Name', record_genre AS 'Genre'
 FROM albums
 WHERE record_genre = 'Disco';
 
+DELETE FROM albums
+WHERE record_genre = 'Disco';
+
 -- Albums by "Whitney Houston" (...or maybe an artist of your choice)
 SELECT record_name AS 'Album Name', artist_name AS 'Artist Name'
 FROM albums
+WHERE artist_name = 'Whitney Houston';
+
+DELETE FROM albums
 WHERE artist_name = 'Whitney Houston';
