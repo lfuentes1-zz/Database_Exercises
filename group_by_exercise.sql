@@ -1,3 +1,3 @@
 SELECT title 
 FROM titles
-GROUP BY title;
+GROUP BY title ASC;
