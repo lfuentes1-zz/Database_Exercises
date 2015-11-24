@@ -18,9 +18,9 @@ WHERE hire_date LIKE '199%'
 AND birth_date LIKE '%-12-25'
 ORDER BY hire_date ASC, birth_date DESC;
 
-SELECT *, COUNT(*)
+SELECT CONCAT(first_name, ' ', last_name) AS full_name, COUNT(*) AS people_count
 FROM employees
 WHERE last_name LIKE '%q%'
 AND last_name NOT LIKE '%qu%'
-GROUP BY first_name, last_name
-ORDER BY first_name, last_name;
+GROUP BY full_name
+ORDER BY people_count DESC;
