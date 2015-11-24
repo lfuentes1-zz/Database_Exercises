@@ -24,12 +24,12 @@ FROM employees
 WHERE first_name = 'Khun'
 AND last_name = 'Bernini';
 
-SELECT *
+SELECT *, DATEDIFF(NOW(), hire_date) AS total_days
 FROM employees
-WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'
+WHERE hire_date LIKE '199%'
 AND birth_date LIKE '%-12-25'
-ORDER BY birth_date ASC, hire_date DESC;
--- Khun Bernin should be the result
+ORDER BY hire_date ASC, birth_date DESC;
+
 
 SELECT *
 FROM employees
