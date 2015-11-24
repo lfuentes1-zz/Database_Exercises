@@ -7,10 +7,11 @@ WHERE (
 )
 GROUP BY gender;
 
-SELECT *
+SELECT *, CONCAT(first_name, ' ' ,last_name)
 FROM employees
 WHERE last_name LIKE 'E%'
 OR last_name LIKE '%E';
+
 
 SELECT *
 FROM employees
