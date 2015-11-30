@@ -37,5 +37,10 @@ SELECT * FROM users AS u
 RIGHT JOIN roles AS r ON u.role_id = r.id;
 
 SELECT * FROM users AS u
-JOIN roles AS r ON u.role_id = r.id
+JOIN roles AS r ON u.role_id = r.id;
+
+SELECT r.name as 'roles', COUNT(u.role_id) AS 'role count' FROM users AS u
+RIGHT JOIN roles AS r ON u.role_id = r.id
+GROUP BY u.role_id;
+
 
