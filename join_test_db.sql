@@ -39,8 +39,20 @@ RIGHT JOIN roles AS r ON u.role_id = r.id;
 SELECT * FROM users AS u
 JOIN roles AS r ON u.role_id = r.id;
 
-SELECT r.name as 'roles', COUNT(u.role_id) AS 'role count' FROM users AS u
+SELECT r.name AS 'roles', COUNT(u.role_id) AS 'role count' FROM users AS u
 RIGHT JOIN roles AS r ON u.role_id = r.id
 GROUP BY u.role_id;
+
+-- Option #2
+-- SELECT users.name AS 'User Name', roles.name AS 'Role', COUNT(role_id)
+-- FROM users
+-- RIGHT JOIN roles ON users.role_id = roles.id
+-- GROUP BY role;
+
+-- Option #3
+-- SELECT r.name as "Role", COUNT(u.id) AS "Numbers of Users with Role"
+-- FROM ries as 
+-- LEFT JOIN users as u ON r.id = u.role_id
+-- GROUP BY r.name;
 
 
