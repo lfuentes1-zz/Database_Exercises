@@ -21,12 +21,11 @@ AND to_date > NOW();
 -- Find all the department managers that are female.
 SELECT emp_no AS 'Employee Number', CONCAT(first_name, ' ', last_name) AS 'Manager Name', gender AS 'Gender'
 FROM employees
-WHERE emp_no IN (
+WHERE gender = 'F' AND emp_no IN (
 	SELECT emp_no
 	FROM dept_manager
 	WHERE to_date > NOW()
-)
-AND gender LIKE 'F';
+);
 
 -- BONUS Find all the department names that have female managers.
 SELECT dept_name AS 'Department Name'
@@ -39,5 +38,6 @@ WHERE dept_no IN (
 		FROM employees
 		WHERE gender LIKE 'F'
 	)
+	AND to_date > NOW()
 )
 -- where and select always have to match
